@@ -146,8 +146,8 @@ body {
   width: 100%;
   height: 100vh;
   background-image: url('../images/bg-abstract.jpg');
-  display: flex;
   justify-content: center;
+  display: flex;
   align-items: center;
   flex-direction: column;
 }
@@ -156,19 +156,19 @@ body {
 }
 nav {
   position: fixed;
-  display: flex;
-  flex-direction: column;
   background: #424b54;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   height: 100%;
   width: 5%;
   align-self: flex-start;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 @media (max-width: 500px) {
   nav {
     width: 100%;
-    height: 50px;
+    height: 10%;
     flex-direction: row;
     bottom: 0;
   }
@@ -180,4 +180,80 @@ nav a {
 }
 nav a:hover {
   color: #fff;
+}
+.home-content {
+  color: #fff;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-content div {
+  text-align: center;
+}
+.home-content div h1 {
+  font-size: 8em;
+  padding: 10px;
+}
+.home-content div h1 span {
+  color: #e59301;
+  font-family: 'Wendy One', sans-serif;
+}
+.home-content div p {
+  font-size: 3em;
+  margin-bottom: 2em;
+  line-height: 1.3;
+}
+@media (max-width: 500px) {
+  .home-content div p {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+}
+.home-content div .home-button {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 0.5em 2em;
+  font-size: 3em;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+.home-content div .home-button:hover {
+  background-color: #e59301;
+}
+@media (max-width: 500px) {
+  .home-content div .home-button {
+    font-size: 2em;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+  49% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.home-content div .home-button span {
+  margin-left: 5%;
+  animation: blink 1s ease infinite alternate;
+}
+.contact-icons {
+  margin: 5% 0;
+  padding: 10px;
+}
+.contact-icons a {
+  font-size: 3.5em;
+  color: #fff;
+  padding: 10px;
+  transition: 0.4s ease-out;
+}
+.contact-icons a:hover {
+  color: #e59301;
 }
